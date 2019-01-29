@@ -1,0 +1,114 @@
+<!doctype HTML>
+<html>
+    
+    <head>
+        <title>Snake!</title>
+        
+    </head>
+    <body id="body">
+        <div id="stage"></div>
+        <div id="controlPanel">
+            <h4 id="score">Length: 1</h4>
+            <div class="modifier">
+            <p>Blocks Per Food</p>
+                <select id="blocksPerFoodInput">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            
+            <div class="modifier">
+            <p>Game Speed</p>
+                <select id="gameSpeedInput">
+                    <option value="300">1</option>
+                    <option value="200">2</option>
+                    <option value="100"selected="selected">3</option>
+                    <option value="70">4</option>
+                    <option value="50">5</option>
+                </select>
+            </div>
+            
+            <div class="modifier">
+            <p>Color Theme</p>
+                <select id="colorTheme">
+                    <option value="0" selected="selected">1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                </select>
+            </div>
+            <div class="modifier">
+                <button id="restartButton">Apply</button>
+            </div>
+            
+        </div>
+    </body>
+        <script src="gameCode.js"></script>
+</html>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        font-family:Helvetica;
+    }
+    body{
+        
+        height:0;
+        overflow:hidden;
+    }
+   
+    #stage{
+        margin:0 auto;
+        margin-top:6px;
+        
+    }
+    select{
+        display:inline-block;
+        color:white;
+        background-color:#212121;
+        border:2px solid gray;
+        padding:5px;
+    }
+    select:focus{
+        border:2px solid red;
+    }
+    p{
+        display:inline-block;
+    }
+    #controlPanel{
+        margin-top:10px;
+        background-color:gray;
+        text-align:center;
+    }
+    h4{
+        position:relative;
+        text-align:center;
+        top:10%;
+        font-size:30px;
+        margin-bottom:13px;
+    }
+    .modifier{
+        position:relative;
+        display:inline-block;
+        margin:20px 20px;
+        font-size:20px;
+        
+    }
+    button{
+        padding:10px;
+        border:2px solid gray;
+        border-radius:5px;
+        color:white;
+        background-color:#212121;
+        -webkit-transition-duration: 0.2s; /* Safari */
+        transition-duration: 0.2s;
+        cursor: pointer;
+    }
+    button:hover{
+        border-color:red;
+    }
+    
+</style>
